@@ -1,6 +1,9 @@
 package stackandqueues;
 
-public class ResizingArrayStackOfStrings {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class ResizingArrayStackOfStrings implements Iterable<String>{
     private int n;
     private String[] array;
 
@@ -33,5 +36,39 @@ public class ResizingArrayStackOfStrings {
             resize(array.length / 2);
         }
         return item;
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return new ResizingArrayIterator();
+    }
+
+    private class ResizingArrayIterator implements Iterator<String> {
+        private int pointer = n - 1;
+
+        @Override
+        public boolean hasNext() {
+            return pointer >= 0;
+        }
+
+        @Override
+        public String next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return array[pointer--];
+        }
+    }
+
+    public static void main(String[] args) {
+        ResizingArrayStackOfStrings stack = new ResizingArrayStackOfStrings();
+        stack.push("first");
+        stack.push("second");
+        stack.push("third");
+        stack.push("forth");
+        Iterator<String> it = stack.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
     }
 }
