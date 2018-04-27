@@ -1,4 +1,4 @@
-package percolation;
+package assignment1_percolation;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -7,7 +7,7 @@ public class Percolation {
     // init N
     private final int n;
 
-    // percolation matrix, false - blocked, true - opened
+    // assignment1_percolation matrix, false - blocked, true - opened
     private boolean[][] a;
 
     // number of opened sites
@@ -91,7 +91,7 @@ public class Percolation {
         percolation.open(1, 1);
         System.out.println("Number of opened sites: " + percolation.numberOfOpenSites());
         System.out.println("(1, 1): " + percolation.percolates());
-//        System.out.println(percolation.quickUnion.connected(percolation.xyTo1D(0, 0), percolation.xyTo1D(1, 1)));
+//        System.out.println(assignment1_percolation.quickUnion.connected(assignment1_percolation.xyTo1D(0, 0), assignment1_percolation.xyTo1D(1, 1)));
         percolation.open(2, 1);
         System.out.println("Number of opened sites: " + percolation.numberOfOpenSites());
         System.out.println("(1, 2): " + percolation.percolates());

@@ -1,4 +1,4 @@
-package percolation;
+package assignment1_percolation;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
@@ -30,12 +30,12 @@ public class PercolationStats {
         stddev = StdStats.stddev(results);
     }
 
-    // sample mean of percolation threshold
+    // sample mean of assignment1_percolation threshold
     public double mean() {
         return mean;
     }
 
-    // sample standard deviation of percolation threshold
+    // sample standard deviation of assignment1_percolation threshold
     public double stddev() {
         return stddev;
     }
