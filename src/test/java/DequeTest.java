@@ -1,4 +1,4 @@
-import assignment2_queues.Deque;
+import assignments.ch2_queues.Deque;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

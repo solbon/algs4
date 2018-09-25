@@ -1,4 +1,4 @@
-package assignment3_collinear;
+package assignments.ch3_collinear;
 
 /******************************************************************************
  *  Compilation:  javac Point.java
@@ -62,7 +62,11 @@ public class Point implements Comparable<Point> {
      */
     public double slopeTo(Point that) {
         /* YOUR CODE HERE */
-        return 0d;
+        if (that.x == this.x) {
+            if (that.y == this.y) return Double.NEGATIVE_INFINITY;
+            else return Double.POSITIVE_INFINITY;
+        }
+        return  (that.y - this.y) / (that.x - this.x);
     }
 
     /**
@@ -79,7 +83,9 @@ public class Point implements Comparable<Point> {
      */
     public int compareTo(Point that) {
         /* YOUR CODE HERE */
-        return 0;
+        if (this.y < that.y || (this.y == that.y && this.x < that.x)) return -1;
+        if (this.x == that.x && this.y == that.y) return 0;
+        return +1;
     }
 
     /**
@@ -90,7 +96,14 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
-        return null;
+        return new Comparator<Point>() {
+            @Override
+            public int compare(Point p1, Point p2) {
+                double slope1 = Point.this.slopeTo(p1);
+                double slope2 = Point.this.slopeTo(p2);
+                return Double.compare(slope1, slope2);
+            }
+        };
     }
 
 

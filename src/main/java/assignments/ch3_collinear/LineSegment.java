@@ -1,4 +1,4 @@
-package assignment3_collinear;
+package assignments.ch3_collinear;
 
 /*************************************************************************
  *  Compilation:  javac LineSegment.java

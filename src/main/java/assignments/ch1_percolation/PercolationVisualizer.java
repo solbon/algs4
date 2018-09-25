@@ -1,4 +1,4 @@
-package assignment1_percolation;
+package assignments.ch1_percolation;
 
 /******************************************************************************
  *  Compilation:  javac assignment1_percolation.PercolationVisualizer.java

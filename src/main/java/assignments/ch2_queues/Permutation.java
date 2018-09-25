@@ -1,4 +1,4 @@
-package assignment2_queues;
+package assignments.ch2_queues;
 
 import edu.princeton.cs.algs4.StdIn;
 

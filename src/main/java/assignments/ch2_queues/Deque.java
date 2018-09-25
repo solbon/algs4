@@ -1,4 +1,4 @@
-package assignment2_queues;
+package assignments.ch2_queues;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
